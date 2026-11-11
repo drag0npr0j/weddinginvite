@@ -6,10 +6,10 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#FFF8EC">
 <title>Hrithwik & Maidhily — Wedding Invitation</title>
-<meta name="description" content="Help Hrithwik put the mala on Maidhily, then open your invitation to our wedding on Monday, 21 December 2026 at Qamar Palace.">
+<meta name="description" content="Help Hrithwik put the varamala on Maidhily, then open your invitation to our wedding on Monday, 21 December 2026 at Qamar Palace.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hrithwik & Maidhily — Wedding Invitation">
-<meta property="og:description" content="Help Hrithwik put the mala on Maidhily, then join us on 21 December 2026 at Qamar Palace. 💐">
+<meta property="og:description" content="Help Hrithwik put the varamala on Maidhily, then join us on 21 December 2026 at Qamar Palace. 💐">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>💐</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -213,10 +213,10 @@ body{background:var(--ivory);color:var(--ink);font-family:var(--round);overflow:
   </section>
 
   <!-- 2–4. Couple, game, victory -->
-  <section id="game" class="screen" aria-label="The mala game">
+  <section id="game" class="screen" aria-label="The varamala game">
     <header class="hud-top">
-      <h2 id="gTitle">Help Hrithwik put the mala on Maidhily! 💐</h2>
-      <p id="gSub">Drag the mala to her neck, or tap Toss.</p>
+      <h2 id="gTitle">Help Hrithwik put the varamala on Maidhily! 💐</h2>
+      <p id="gSub">Drag the varamala to her neck, or tap Toss.</p>
       <div class="meter" id="meter" aria-label="Maidhily's mischief: 3 of 3 left"><span>Mischief</span><i>😜</i><i>😜</i><i>😜</i></div>
     </header>
     <div id="worldWrap">
@@ -225,7 +225,7 @@ body{background:var(--ivory);color:var(--ink);font-family:var(--round);overflow:
         <div id="ring"><div class="pulse"></div></div>
         <div class="actor" id="brideEl"><div class="bob"><div class="inner"></div></div></div>
         <div class="actor" id="groomEl"><div class="bob"><div class="inner"></div></div></div>
-        <div id="malaEl" tabindex="0" role="button" aria-label="Wedding mala. Drag it to Maidhily's neck, or use the arrow keys to move it and Enter to place it."><div class="bob"><div class="inner"></div></div></div>
+        <div id="malaEl" tabindex="0" role="button" aria-label="Wedding varamala. Drag it to Maidhily's neck, or use the arrow keys to move it and Enter to place it."><div class="bob"><div class="inner"></div></div></div>
         <div id="hint" aria-hidden="true">👆</div>
         <div class="bubble" id="bubG"></div>
         <div class="bubble" id="bubB"></div>
@@ -234,7 +234,7 @@ body{background:var(--ivory);color:var(--ink);font-family:var(--round);overflow:
       </div>
     </div>
     <footer class="hud-bottom">
-      <button id="tossBtn" class="btn ghost" type="button">Toss the mala 💐</button>
+      <button id="tossBtn" class="btn ghost" type="button">Toss the varamala 💐</button>
       <button id="skipBtn" class="btn ghost" type="button" hidden>Skip to the invitation</button>
       <button id="openBtn" class="btn primary" type="button" hidden>Open your invitation 💌</button>
     </footer>
@@ -257,7 +257,7 @@ body{background:var(--ivory);color:var(--ink);font-family:var(--round);overflow:
         </div>
         <div style="--i:5"><a class="mapbtn" href="https://maps.app.goo.gl/16t8oyWxzLwLiDiG6" target="_blank" rel="noopener">📍 VIEW LOCATION IN GOOGLE MAPS</a></div>
         <p class="closing" style="--i:6">Your presence will make our celebration even more special. ❤️</p>
-        <div style="--i:7"><button id="replayBtn" class="btn ghost" type="button">Play the mala game again 💐</button></div>
+        <div style="--i:7"><button id="replayBtn" class="btn ghost" type="button">Play the varamala game again 💐</button></div>
       </article>
     </div>
     <div class="inv-frame" aria-hidden="true"></div>
@@ -637,8 +637,8 @@ function resetGame(){
   mood('b','smirk'); arms('b','down'); mood('g','smile'); arms('g','hold');
   banner.innerHTML = ''; bubB.classList.remove('show'); bubG.classList.remove('show'); toastEl.classList.remove('show');
   tossBtn.hidden = false; tossBtn.disabled = true; skipBtn.hidden = true; openBtn.hidden = true;
-  $('#gTitle').textContent = 'Help Hrithwik put the mala on Maidhily! 💐';
-  $('#gSub').textContent = 'Drag the mala to her neck, or tap Toss.';
+  $('#gTitle').textContent = 'Help Hrithwik put the varamala on Maidhily! 💐';
+  $('#gSub').textContent = 'Drag the varamala to her neck, or tap Toss.';
   updateMeter();
 }
 
@@ -646,7 +646,7 @@ function startIntro(){
   S.phase = 'intro'; show('game'); resetGame(); layout();
   if(!RM){ groomEl.classList.add('enter-l'); brideEl.classList.add('enter-r'); }
   later(() => malaEl.classList.add('show'), RM ? 0 : 900);
-  later(() => { placeBubbles(); say(bubG, "Muhūrtham time! This mala is for Maidhily 💐", 2300); }, RM ? 100 : 1000);
+  later(() => { placeBubbles(); say(bubG, "Muhūrtham time! This varamala is for Maidhily 💐", 2300); }, RM ? 100 : 1000);
   later(() => { placeBubbles(); mood('b','tongue', 1600); say(bubB, "Hmm… catch me if you can! 😜", 2300); }, RM ? 1300 : 2700);
   later(beginPlay, RM ? 2600 : 4700);
 }
@@ -662,7 +662,7 @@ function beginPlay(){
   hint.style.setProperty('--x0', S.mala.x + 'px'); hint.style.setProperty('--y0', (S.mala.y + 50) + 'px');
   hint.style.setProperty('--x1', n.x + 'px'); hint.style.setProperty('--y1', (n.y + 46) + 'px');
   hint.classList.add('on');
-  statusEl.textContent = "The game has started. Drag the mala to Maidhily's neck, or press Toss the mala.";
+  statusEl.textContent = "The game has started. Drag the varamala to Maidhily's neck, or press Toss the varamala.";
 }
 
 function calmDown(){
@@ -672,7 +672,7 @@ function calmDown(){
     S.calm = true; S.dodgesLeft = 0; updateMeter();
     mood('b','shy'); arms('b','clasp');
     placeBubbles(); say(bubB, "Okay, okay… I'm ready 😊", 2200);
-    $('#gSub').textContent = "She's ready now. Put the mala on! 💐";
+    $('#gSub').textContent = "She's ready now. Put the varamala on! 💐";
   }, 900);
 }
 
@@ -726,8 +726,8 @@ function victory(){
   const b = S.bride; b.tx = b.x; b.lockUntil = 0; b.duckUntil = 0;
   S.mala.mode = 'snap'; tween(320, neck, 0, () => { S.mala.mode = 'worn'; });
   mood('b','open'); arms('b','down'); mood('g','open'); arms('g','down');
-  sfx.success(); statusEl.textContent = 'You did it! The mala is on Maidhily.';
-  $('#gTitle').textContent = 'The mala is in place! 💐'; $('#gSub').textContent = 'Love wins.';
+  sfx.success(); statusEl.textContent = 'You did it! The varamala is on Maidhily.';
+  $('#gTitle').textContent = 'The varamala is in place! 💐'; $('#gSub').textContent = 'Love wins.';
   const step = RM ? 900 : 1600;
   later(() => {
     mood('b','happy'); arms('b','clasp'); mood('g','happy'); arms('g','cheer');
@@ -739,7 +739,7 @@ function victory(){
   }, RM ? 300 : 800);
   if(!RM) later(() => { [brideEl, groomEl, malaEl].forEach(el => el.classList.add('dance')); }, 1900);
   later(() => setBanner('YAY! YOU DID IT! ❤️'), RM ? 400 : 1000);
-  later(() => setBanner('FINALLY, THE MALA IS IN PLACE! 😂💐'), (RM ? 400 : 1000) + step);
+  later(() => setBanner('FINALLY, THE VARAMALA IS IN PLACE! 😂💐'), (RM ? 400 : 1000) + step);
   later(() => { setBanner('LOVE WINS. CELEBRATION BEGINS!'); if(!RM){ const p = toScreen(220, 280); burst(p.x, p.y, 10, 'heart'); } }, (RM ? 400 : 1000) + step*2);
   later(() => {
     banner.innerHTML = `<span class="soft">You've helped bring our beautiful beginning to life. Now, you're invited to celebrate with us!</span>`;
